@@ -29,4 +29,9 @@ const elementsOfGallery = images
 
 galleryList.insertAdjacentHTML("afterbegin", elementsOfGallery);
 
-// galleryList.style.display = "flexbox";
+// Styles
+galleryList.style.display = "flex";
+galleryList.style.listStyleType = "none";
+galleryList.style.padding = "0";
+galleryList.style.margin = "0";
+galleryList.style.gap = "30px";
