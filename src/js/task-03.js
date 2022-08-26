@@ -28,10 +28,15 @@ const elementsOfGallery = images
   .join("");
 
 galleryList.insertAdjacentHTML("afterbegin", elementsOfGallery);
+const galleryImages = galleryList.querySelectorAll(".image");
 
 // Styles
 galleryList.style.display = "flex";
+galleryList.style.alignItems = "center";
 galleryList.style.listStyleType = "none";
 galleryList.style.padding = "0";
 galleryList.style.margin = "0";
 galleryList.style.gap = "30px";
+galleryImages.forEach((image) => {
+  image.style.width = "400px";
+});
