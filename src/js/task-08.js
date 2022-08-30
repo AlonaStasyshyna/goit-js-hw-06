@@ -16,6 +16,7 @@ function getDataFromForm(event) {
   const elementsForm = event.target.elements;
   const email = elementsForm.email.value;
   const password = elementsForm.password.value;
+
   const formData = {
     email,
     password,

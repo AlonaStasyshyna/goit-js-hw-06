@@ -6,8 +6,10 @@
 const input = document.querySelector("input");
 
 input.addEventListener("blur", () => {
+  input.classList.add("invalid");
+
   if (input.value.length === Number(input.dataset.length)) {
-    input.classList.toggle("valid");
+    input.classList.remove("invalid");
+    input.classList.add("valid");
   }
-  input.classList.toggle("invalid");
 });
