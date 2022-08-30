@@ -4,12 +4,13 @@
 // Для додавання стилів використовуй CSS-класи valid і invalid, які ми вже додали у вихідні файли завдання.
 
 const input = document.querySelector("input");
+const { classList } = input;
 
 input.addEventListener("blur", () => {
-  input.classList.add("invalid");
+  classList.add("invalid");
 
   if (input.value.length === Number(input.dataset.length)) {
-    input.classList.remove("invalid");
-    input.classList.add("valid");
+    classList.remove("invalid");
+    classList.add("valid");
   }
 });

@@ -13,13 +13,11 @@ loginForm.addEventListener("submit", getDataFromForm);
 function getDataFromForm(event) {
   event.preventDefault();
 
-  const elementsForm = event.target.elements;
-  const email = elementsForm.email.value;
-  const password = elementsForm.password.value;
+  const { email, password } = event.target.elements;
 
   const formData = {
-    email,
-    password,
+    email: email.value,
+    password: password.value,
   };
 
   if (email === "" || password === "") {
